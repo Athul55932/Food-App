@@ -9,7 +9,6 @@
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
@@ -40,7 +39,6 @@
       <change afterPath="$PROJECT_DIR$/src/pages/AdminMenuPage.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/pages/AdminOrdersPage.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/pages/AdminRestaurantPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/CartPage.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/pages/LoginPage.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/pages/OrdersPage.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/pages/RestaurantListPage.jsx" afterDir="false" />
@@ -49,8 +47,6 @@
       <change afterPath="$PROJECT_DIR$/src/reportWebVitals.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/routes.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/setupTests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +70,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -98,7 +94,7 @@
       <option name="presentableId" value="Default" />
       <updated>1768655299405</updated>
       <workItem from="1768655300838" duration="664000" />
-      <workItem from="1768661199545" duration="2507000" />
+      <workItem from="1768661199545" duration="3095000" />
     </task>
     <servers />
   </component>

@@ -89,8 +89,9 @@ export default function CartPage() {
       textAlign: "right",
     },
     button: {
-      width: "100%",
+      width: "50%",
       padding: "12px",
+      align: "center",
       background: cart.items.length === 0 ? "#9ca3af" : "#ff6b35",
       color: "#fff",
       border: "none",
