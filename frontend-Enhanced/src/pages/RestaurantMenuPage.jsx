@@ -12,7 +12,7 @@ export default function RestaurantMenuPage() {
     const [message, setMessage] = useState("");
 
     useEffect(() => {
-        fetch(`http://localhost:8080/restaurants/${id}`)
+        fetch(`${process.env.REACT_APP_API_URL}/restaurants/${id}`)
             .then(res => res.json())
             .then(data => {
                 setMenu(data.foodItems || []);

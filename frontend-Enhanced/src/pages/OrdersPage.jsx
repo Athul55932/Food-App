@@ -11,7 +11,7 @@ export default function OrdersPage() {
     useEffect(() => {
         if (!user) return;
 
-        fetch(`http://localhost:8080/cart/user/${user.id}`)
+        fetch(`${process.env.REACT_APP_API_URL}/cart/user/${user.id}`)
             .then(res => res.json())
             .then(data => {
                 setOrders(data);

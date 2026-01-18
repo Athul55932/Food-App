@@ -21,7 +21,7 @@ export default function AddFoodForm({ restaurantId, onSuccess }) {
         const body = { name, price: Number(price), category };
         try {
             const res = await fetch(
-                `http://localhost:8080/restaurants/${restaurantId}/add-food?adminId=${user.id}`,
+                `${process.env.REACT_APP_API_URL}/restaurants/${restaurantId}/add-food?adminId=${user.id}`,
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },

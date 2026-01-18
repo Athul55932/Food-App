@@ -1,7 +1,4 @@
 package com.example.FoodApp.service;
-
-
-
 import com.example.FoodApp.dto.LoginRequest;
 import com.example.FoodApp.dto.LoginResponse;
 import com.example.FoodApp.dto.SignupRequest;
@@ -73,6 +70,7 @@ public class AuthService {
         response.setId(user.getId());
         response.setEmail(user.getEmail());
         response.setRole(user.getRole());
+
 
         return response;
     }

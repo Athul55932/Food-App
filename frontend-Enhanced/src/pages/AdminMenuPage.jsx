@@ -10,7 +10,8 @@ export default function AdminMenuPage() {
   const [loading, setLoading] = useState(true);
 
   const fetchMenu = () => {
-    fetch(`http://localhost:8080/restaurants/${id}`)
+      console.log('here:${process.env.REACT_APP_API_URL}');
+    fetch(`${process.env.REACT_APP_API_URL}/restaurants/${id}`)
       .then(res => res.json())
       .then(data => {
         setMenu(data.foodItems || []);

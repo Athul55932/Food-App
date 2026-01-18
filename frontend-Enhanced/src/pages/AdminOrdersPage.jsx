@@ -10,7 +10,7 @@ export default function AdminOrdersPage() {
   const fetchOrders = () => {
     if (!user) return;
 
-    fetch(`http://localhost:8080/cart/admin?adminId=${user.id}`)
+    fetch(`${process.env.REACT_APP_API_URL}/cart/admin?adminId=${user.id}`)
       .then(res => res.json())
       .then(data => {
         setOrders(data);

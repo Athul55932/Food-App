@@ -23,7 +23,7 @@ export default function AddRestaurantForm({ onSuccess }) {
 
     try {
       const res = await fetch(
-          `http://localhost:8080/restaurants/add?adminId=${user.id}`,
+          `${process.env.REACT_APP_API_URL}/restaurants/add?adminId=${user.id}`,
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },

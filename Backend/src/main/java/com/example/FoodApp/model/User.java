@@ -13,9 +13,9 @@ public class User {
     private String id;
 
     private String email;
-    private String password; // hashed
+    private String password;
     private String name;
-    private String phoneNumber; // 10 chars only
+    private String phoneNumber;
     private Role role;
     private String address;
 }

@@ -46,8 +46,8 @@ export default function SignupPage() {
     try {
       const endpoint =
           role === "ADMIN"
-              ? "http://localhost:8080/auth/admin/signup"
-              : "http://localhost:8080/auth/signup";
+              ? `${process.env.REACT_APP_API_URL}/auth/admin/signup`
+              : `${process.env.REACT_APP_API_URL}/auth/signup`;
 
       const res = await fetch(endpoint, {
         method: "POST",

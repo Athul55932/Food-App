@@ -28,6 +28,7 @@ public class CartService {
     }
 
     // CHECKOUT (CREATE ORDER)
+// ALSO THE ORDER SUM IS CALCULATED HERE
     public Cart checkout(CheckoutRequest request) {
 
         User user = userRepository.findById(request.getUserId())

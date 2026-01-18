@@ -10,7 +10,7 @@ export default function AdminRestaurantPage() {
     const navigate = useNavigate();
 
     const fetchRestaurants = () => {
-        fetch("http://localhost:8080/restaurants")
+        fetch(`${process.env.REACT_APP_API_URL}/restaurants`)
             .then(res => res.json())
             .then(data => {
                 setRestaurants(data);

@@ -17,7 +17,7 @@ export default function AdminOrderCard({ order, onStatusChange }) {
 
     try {
       const res = await fetch(
-          `http://localhost:8080/cart/${order.id}/status?adminId=${user.id}`,
+          `${process.env.REACT_APP_API_URL}/cart/${order.id}/status?adminId=${user.id}`,
           {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
