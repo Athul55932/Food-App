@@ -1,7 +1,5 @@
 package com.example.FoodApp.config;
 
-
-
 import com.example.FoodApp.enums.FoodCategory;
 import com.example.FoodApp.enums.Role;
 import com.example.FoodApp.model.FoodItem;
@@ -9,6 +7,9 @@ import com.example.FoodApp.model.Restaurant;
 import com.example.FoodApp.model.User;
 import com.example.FoodApp.repository.RestaurantRepository;
 import com.example.FoodApp.repository.UserRepository;
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoDatabase;
+import org.bson.Document;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,14 +22,32 @@ import java.util.List;
 public class DataSeeder {
 
     @Bean
-    CommandLineRunner seedData(UserRepository userRepository,
-                               RestaurantRepository restaurantRepository) {
+    CommandLineRunner seedData(
+            UserRepository userRepository,
+            RestaurantRepository restaurantRepository,
+            MongoClient mongoClient // ✅ injected by Spring
+    ) {
 
         return args -> {
 
+            /* ============================
+               🔍 MONGODB ATLAS PING TEST
+               ============================ */
+            try {
+                MongoDatabase database = mongoClient.getDatabase("admin");
+                database.runCommand(new Document("ping", 1));
+                System.out.println("✅ Successfully connected to MongoDB Atlas!");
+            } catch (Exception e) {
+                System.err.println("❌ MongoDB connection failed");
+                e.printStackTrace();
+                return; // ❌ Stop seeding if DB is not connected
+            }
+
             BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
-            // --------- ADMIN ----------
+            /* ============================
+               👤 ADMIN SEED
+               ============================ */
             if (userRepository.findByEmail("admin@foodapp.com").isEmpty()) {
                 User admin = new User();
                 admin.setEmail("admin@foodapp.com");
@@ -41,7 +60,9 @@ public class DataSeeder {
                 userRepository.save(admin);
             }
 
-            // --------- USER ----------
+            /* ============================
+               👤 USER SEED
+               ============================ */
             if (userRepository.findByEmail("user@foodapp.com").isEmpty()) {
                 User user = new User();
                 user.setEmail("user@foodapp.com");
@@ -54,7 +75,9 @@ public class DataSeeder {
                 userRepository.save(user);
             }
 
-            // --------- RESTAURANT ----------
+            /* ============================
+               🍽 RESTAURANT + FOOD ITEMS
+               ============================ */
             if (restaurantRepository.count() == 0) {
 
                 Restaurant restaurant = new Restaurant();
@@ -83,7 +106,6 @@ public class DataSeeder {
                 foodItems.add(f3);
 
                 restaurant.setFoodItems(foodItems);
-
                 restaurantRepository.save(restaurant);
             }
 
@@ -91,4 +113,3 @@ public class DataSeeder {
         };
     }
 }
-
