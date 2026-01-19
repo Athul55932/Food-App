@@ -72,6 +72,8 @@ export default function LoginPage() {
       marginBottom: "24px",
     },
     input: {
+        alignItems: "center",
+        justifyContent:"Center",
       width: "100%",
       padding: "12px",
       marginTop: "6px",
@@ -127,6 +129,7 @@ export default function LoginPage() {
             <label>Email</label>
             <input
                 style={styles.input}
+                placeholder="Enter Your Email."
                 type="email"
                 value={email}
                 required
@@ -136,6 +139,7 @@ export default function LoginPage() {
             <label>Password</label>
             <input
                 style={styles.input}
+                placeholder="Enter Your Password."
                 type="password"
                 value={password}
                 required

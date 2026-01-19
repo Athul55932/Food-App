@@ -1,8 +1,9 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { AuthProvider, AuthContext } from "./contexts/AuthContext";
 import { CartProvider } from "./contexts/CartContext";
 import React from "react";
 import Navbar from "./components/Navbar";
+import NavLogin from "./components/NavLogin";
 
 // Pages
 import LoginPage from "./pages/LoginPage";
@@ -26,59 +27,72 @@ function ProtectedRoute({ children, role }) {
   return children;
 }
 
+function Layout() {
+  const location = useLocation();
+  const isAuthPage =
+    location.pathname === "/login" ||
+    location.pathname === "/signup";
+
+  return (
+    <>
+      {isAuthPage ? <NavLogin /> : <Navbar />}
+
+      <Routes>
+        {/* Auth */}
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+
+        {/* User */}
+        <Route path="/restaurants" element={
+          <ProtectedRoute role="CUSTOMER">
+            <RestaurantListPage />
+          </ProtectedRoute>
+        } />
+        <Route path="/restaurants/:id" element={
+          <ProtectedRoute role="CUSTOMER">
+            <RestaurantMenuPage />
+          </ProtectedRoute>
+        } />
+        <Route path="/cart" element={
+          <ProtectedRoute role="CUSTOMER">
+            <CartPage />
+          </ProtectedRoute>
+        } />
+        <Route path="/orders" element={
+          <ProtectedRoute role="CUSTOMER">
+            <OrdersPage />
+          </ProtectedRoute>
+        } />
+
+        {/* Admin */}
+        <Route path="/admin/restaurants" element={
+          <ProtectedRoute role="ADMIN">
+            <AdminRestaurantPage />
+          </ProtectedRoute>
+        } />
+        <Route path="/admin/restaurants/:id" element={
+          <ProtectedRoute role="ADMIN">
+            <AdminMenuPage />
+          </ProtectedRoute>
+        } />
+        <Route path="/admin/orders" element={
+          <ProtectedRoute role="ADMIN">
+            <AdminOrdersPage />
+          </ProtectedRoute>
+        } />
+
+        <Route path="*" element={<Navigate to="/login" />} />
+      </Routes>
+    </>
+  );
+}
+
 function App() {
   return (
     <AuthProvider>
       <CartProvider>
         <Router>
-          <Navbar />
-          <Routes>
-            {/* Auth */}
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/signup" element={<SignupPage />} />
-
-            {/* User Routes */}
-            <Route path="/restaurants" element={
-              <ProtectedRoute role="CUSTOMER">
-                <RestaurantListPage />
-              </ProtectedRoute>
-            } />
-            <Route path="/restaurants/:id" element={
-              <ProtectedRoute role="CUSTOMER">
-                <RestaurantMenuPage />
-              </ProtectedRoute>
-            } />
-            <Route path="/cart" element={
-              <ProtectedRoute role="CUSTOMER">
-                <CartPage />
-              </ProtectedRoute>
-            } />
-            <Route path="/orders" element={
-              <ProtectedRoute role="CUSTOMER">
-                <OrdersPage />
-              </ProtectedRoute>
-            } />
-
-            {/* Admin Routes */}
-            <Route path="/admin/restaurants" element={
-              <ProtectedRoute role="ADMIN">
-                <AdminRestaurantPage />
-              </ProtectedRoute>
-            } />
-            <Route path="/admin/restaurants/:id" element={
-              <ProtectedRoute role="ADMIN">
-                <AdminMenuPage />
-              </ProtectedRoute>
-            } />
-            <Route path="/admin/orders" element={
-              <ProtectedRoute role="ADMIN">
-                <AdminOrdersPage />
-              </ProtectedRoute>
-            } />
-
-            {/* Default */}
-            <Route path="*" element={<Navigate to="/login" />} />
-          </Routes>
+          <Layout />
         </Router>
       </CartProvider>
     </AuthProvider>

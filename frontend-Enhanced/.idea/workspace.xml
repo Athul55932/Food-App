@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a5890173-2d20-4587-85fb-ea20ebb386b1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/com/example/FoodApp/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/src/main/java/com/example/FoodApp/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/com/example/FoodApp/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/src/main/java/com/example/FoodApp/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/com/example/FoodApp/repository/CartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/src/main/java/com/example/FoodApp/repository/CartRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/com/example/FoodApp/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/src/main/java/com/example/FoodApp/service/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/com/example/FoodApp/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/src/main/java/com/example/FoodApp/service/CartService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/304501/Desktop/Food-App/frontend-Enhanced" value="38O0R7UPCsbPYdroc8th0LrwUeT" />
+    </persistenceIdMap>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -25,22 +28,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Node.js.LoginPage.jsx.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Athul M Nair/Desktop/Food-App/frontend-Enhanced",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Node.js.LoginPage.jsx.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/304501/Desktop/Food-App/frontend-Enhanced&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="LoginPage.jsx" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="LoginPage.jsx" working-dir="$PROJECT_DIR$/src/pages">
       <envs>
@@ -51,19 +55,6 @@
       </EXTENSION>
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Node.js.LoginPage.jsx" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.240" />
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.29346.240" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

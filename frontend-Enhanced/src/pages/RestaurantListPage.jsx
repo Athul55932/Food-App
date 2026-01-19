@@ -84,7 +84,7 @@ export default function RestaurantListPage() {
   return (
       <div style={styles.container}>
         <div style={styles.header}>
-          <h2 style={{ margin: 0 }}>🍴 Restaurants</h2>
+          <h2 style={{ margin: 0, color: "#6b7280" }}>🍴 Restaurants</h2>
 
         </div>
 

@@ -10,6 +10,7 @@ export default function FoodItemCard({ food, onAdd }) {
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
+            alignItems: "center",
             transition: "transform 0.2s ease",
         },
         name: {

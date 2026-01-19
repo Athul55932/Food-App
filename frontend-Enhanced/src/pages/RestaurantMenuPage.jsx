@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from "react";
+    import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../contexts/CartContext";
 import FoodItemCard from "../components/FoodItemCard";
@@ -43,6 +43,7 @@ export default function RestaurantMenuPage() {
             fontFamily: "Inter, system-ui, sans-serif",
             color: theme === "light" ? "#111827" : "#f9fafb",
             transition: "color 0.3s ease",
+
         },
         header: {
             display: "flex",
